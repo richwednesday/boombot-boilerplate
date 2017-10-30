@@ -8,7 +8,7 @@ It's as easy as:
 3. Push your bot to Heroku/Now and review it with Facebook.
 4. You're live! :speech_balloon:
 
-**BoomBot is a minimalistic boilerplate** and *a microframework proof-of-concept* that allows you to launch your functional bot on Messenger in a matter of minutes. It is inspired by a [ruby version](https://github.com/progapandist/rubotnik-boilerplate). The main promise of **BoomBot** is to speed up bot development in Node.js and provide a more natural mental model for bot-user interactions.
+**BoomBot is a minimalistic boilerplate** and *a microframework proof-of-concept* that allows you to launch your functional bot on Messenger in a matter of minutes. It is inspired by an awesome [ruby version](https://github.com/progapandist/rubotnik-boilerplate). The main promise of **BoomBot** is to speed up bot development in Node.js and provide a more natural mental model for bot-user interactions.
 
 **BoomBot** is also **very** beginner friendly :baby: :baby_bottle: and can be used in class to teach programming students about bots.
 
@@ -44,9 +44,9 @@ Now open the boilerplate in your favorite text editor and let's take a look at t
 │   ├── questionnaire.js # or in one of associated modules
 │   └── show_ui_examples.js
 ├── .gitignore
-├── privacy_policy.pdf  # replace with your own for FB approval
 ├── boombot # an embryo for the framework
 │   ├── message_dispatch.js
+|   ├── postback_dispatch.js
 │   ├── persistent_menu.js # design your persistent menu here
 │   ├── bot-profile.js
 │   ├── boombot.js
