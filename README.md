@@ -1,6 +1,8 @@
 # BoomBot
 All you need to launch your own functional Node.js bot for Facebook Messenger together with some Natural language understanding from Wit.ai.
 
+[Talk to Demo Bot](http://m.me/1482295225158608/)
+
 It's as easy as:
 
 1. Clone the boilerplate.
