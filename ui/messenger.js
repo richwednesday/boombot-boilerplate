@@ -1,4 +1,3 @@
-const co = require('co');
 const fetch = require('node-fetch');
 const querystring = require("querystring");
 
@@ -150,7 +149,9 @@ module.exports = class Messenger {
 
   setMessengerProfile (jsonObject, cb) {
     const uri = `https://graph.facebook.com/v2.6/me/messenger_profile`;
-    const qs = `access_token=${this.token}`;
+    const qs = {
+      access_token: this.token
+    }
     const req = {
       method: 'POST',
       headers: {
@@ -163,11 +164,13 @@ module.exports = class Messenger {
 }
 
 const sendRequest = (uri, qs, options, cb) => {
-  co(function *() {
-    let res = yield fetch(`${uri}/?${querystring.stringify(qs)}`, options)
-    let body = yield res.json();
-
-    if (body.error && cb) return cb(body.error)
-    if (cb) cb(null, body)
-  }).catch(err => console.log(err))
+  fetch(`${uri}/?${querystring.stringify(qs)}`, options)
+    .then(res => {
+      return res.json();
+    })
+    .then(json => {
+      if (json.error) return console.log(json)
+      if (cb) cb(null, json)  
+    }) 
+    .catch(err => console.log(err))
 }

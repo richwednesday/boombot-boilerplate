@@ -1,5 +1,5 @@
 const FBMessenger = require('../ui/messenger')
-const messenger = new FBMessenger(process.env.pageAccessToken)
+const messenger = new FBMessenger(process.env.FB_PAGE_TOKEN)
 
 // Sets up greeting screen for the bot
 BotProfile = {

@@ -1,16 +1,16 @@
 // A model for the user
 class User {
-  constructor (id, location) {
+  constructor (id, session) {
     this.id = id;
-    this.location = location;
+    this.session = session;
   }
 
-  setLocation(location) {
-  	this.location = location;
+  setSession(session) {
+  	this.session = session;
   }
 
-  getLocation() {
-  	return this.location;
+  getSession() {
+  	return this.session;
   }
 
   
@@ -26,8 +26,8 @@ class User {
 }
 
 module.exports = class specificUser extends User {
-	constructor(id, location) {
-		super(id, location)
+	constructor(id, session) {
+		super(id, session)
 	}
 
 	/***********************************************

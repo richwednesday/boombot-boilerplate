@@ -1,21 +1,16 @@
+const User = require('../boombot/user') 
+
 // In-memory storage for users
-let UserStore = function() {	
-	let users = [];
+	
+let users = [];
 
-	return {
-		find_or_create_user(id) {
-	    find(id) || add(id)
-		}
-	}
-
-	function find(id) {
-		return users.find(user => user.id === id);
-	}
-
-	function add(user) {
-		users.push(user) 
-	}
- 
+function find(id) {
+	return users.find(user => user.id === id);
 }
 
-module.exports = UserStore;
+function add(id, session) {
+	users.push(new User(id, session)) 
+}
+
+module.exports = { find, add }
+

@@ -1,5 +1,5 @@
 const FBMessenger = require('../ui/messenger')
-const messenger = new FBMessenger(process.env.pageAccessToken)
+const messenger = new FBMessenger(process.env.FB_PAGE_TOKEN)
 
 // Enables persistent menu for your bot
 PersistentMenu = {
@@ -17,18 +17,18 @@ PersistentMenu = {
           call_to_actions: [
             {
             	type: 'postback',
-              title: 'Get Events',
-              payload: 'EVENTS'
+              title: 'Ask a Question',
+              payload: 'Question'
             },
             {
               type: 'postback',
-              title: 'Set Location',
-              payload: 'LOCATION'
+              title: 'Give Feedback',
+              payload: 'Feedback'
             },
             {
               type: 'postback',
-              title: 'Feedback',
-              payload: 'FEEDBACK'
+              title: 'Contribute',
+              payload: 'Contribute'
             }
           ]
         }
