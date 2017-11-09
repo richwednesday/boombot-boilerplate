@@ -36,18 +36,8 @@ Now open the boilerplate in your favorite text editor and let's take a look at t
 
 ```bash
 .
-├── package.json
-├── package-lock.json
-├── README.md # this readme
-├── app.js # <= !!! YOUR STARTING POINT !!!
-├── commands # everything in this folder will become
-             # methods for Dispatch classes
-│   ├── commands.js # require all your commands here
-│   ├── contribute.js 
-│   └── feedback.js
-│   └── question.js
-│   └── start.js
 ├── .gitignore
+├── app.js # <= !!! YOUR STARTING POINT !!!
 ├── boombot # an embryo for the framework
 │   ├── message_dispatch.js
 |   ├── postback_dispatch.js
@@ -56,6 +46,16 @@ Now open the boilerplate in your favorite text editor and let's take a look at t
 │   ├── boombot.js
 │   ├── user.js # User model, define your own containers for state
 │   └── user_store.js # in-memory storage for users
+├── commands # everything in this folder will become
+             # methods for Dispatch classes
+│   ├── commands.js # require all your commands here
+│   ├── contribute.js 
+│   └── feedback.js
+│   └── question.js
+│   └── start.js
+├── package.json
+├── package-lock.json
+├── README.md # this readme
 └── ui # convenience class to build UI elemens
     └── messenger.js
 

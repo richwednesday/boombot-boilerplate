@@ -4,7 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const express = require('express');
-const Boombot = require('./boombot/Boombot')
+const Boombot = require('./boombot/boombot')
 
 // Enable "Get Started" button, greeting and persistent menu for your bot
 // Can uncomment this code to set it
