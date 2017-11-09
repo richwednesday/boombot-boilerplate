@@ -41,10 +41,12 @@ Now open the boilerplate in your favorite text editor and let's take a look at t
 ├── README.md # this readme
 ├── app.js # <= !!! YOUR STARTING POINT !!!
 ├── commands # everything in this folder will become
-             # private methods for Dispatch classes
-│   ├── commands.js # write your commands as methods here
-│   ├── questionnaire.js # or in one of associated modules
-│   └── show_ui_examples.js
+             # methods for Dispatch classes
+│   ├── commands.js # require all your commands here
+│   ├── contribute.js 
+│   └── feedback.js
+│   └── question.js
+│   └── start.js
 ├── .gitignore
 ├── boombot # an embryo for the framework
 │   ├── message_dispatch.js
@@ -83,7 +85,6 @@ APP_SECRET=your_app_secret_from_the_dashboard
 From now on, they can be referenced inside your program as `process.env.ACCESS_TOKEN` and `process.env.VERIFY_TOKEN`.
 
 **Note:**
-*Now Secrets
 
 ## Running on localhost
 Starting your bot on localhost by running this command
