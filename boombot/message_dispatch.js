@@ -10,21 +10,28 @@ function messageTextHandler(senderID, message) {
   let user = userStore.find(senderID);
   if (user) {
     let session = user.getSession()
+
     if (session === "Asking for users feedback") {
       messenger.sendTextMessage(senderID, "Thank you for your feedback. " +
         "Duly appreciated 👍")
-    } else if (session === "Asking for users question") {
+      //change the session to stop the cycle from repeating 
+      user.setSession("Accepted Feedback")
+    } 
+
+    else if (session === "Asking for users question") {
       messenger.sendTextMessage(senderID, "Thank you for your interest, " +
         "would respond to your question soonest.")
+      user.setSession("Got Question")
     }
+
     else {
-      // for now echo back all messages received
-      messenger.sendTextMessage(senderID, message.text)  
+      messenger.sendTextMessage(senderID, "I am not sure I understand that. " +
+        "Please use my menu to find out more.")  
     }
   }
   else {
-    // for now echo back all messages received
-    messenger.sendTextMessage(senderID, message.text)
+    messenger.sendTextMessage(senderID, "I am not sure I understand that. " +
+      "Please use my menu to find out more.")
   }
 	
 }

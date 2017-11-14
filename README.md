@@ -18,7 +18,7 @@ It's as easy as:
 Assuming you are going to use this boilerplate as a starting point for your own bot:
 
 ```bash
-git clone git@github.com:richwednesday/boombot-boilerplate.git
+git clone https://github.com/richwednesday/boombot-boilerplate.git
 
 mv boombot-boilerplate YOUR_PROJECT_NAME
 
@@ -46,8 +46,7 @@ Now open the boilerplate in your favorite text editor and let's take a look at t
 │   ├── boombot.js
 │   ├── user.js # User model, define your own containers for state
 │   └── user_store.js # in-memory storage for users
-├── commands # everything in this folder will become
-             # methods for Dispatch classes
+├── commands # everything in this folder will become methods for Dispatch files
 │   ├── commands.js # require all your commands here
 │   ├── contribute.js 
 │   └── feedback.js
